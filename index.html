@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lanb="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Javascript Practice</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+        <!--  <div class="container">
+                <p id="qusetion"></p>
+                <ul id="choices"></ul>
+                <div id="next" class="disabled">Next</div>
+        
+                <section id="result">
+                    <p></p>
+                    <a href="">Replay?</a>
+                </section> 
+            </div>
+            <div class="container">
+                <ul class="menu">
+                    <li><a href="#">game1</a></li>
+                    <li><a href="#">game2</a></li>
+                    <li><a href="#">game3</a></li>
+                </ul>
+            </div>
+            <section class="content">
+
+            </section>
+<div class="container">
+    <button class="btn " id="btn">?</button>
+</div>
+
+<div class="container bg-info text-center mx-auto">
+    <p  class="text-light" id="target">click to start</p>
+    <p class="info">
+        Leter conut: <span id="score">0</span>,
+        Miss count: <span id="miss">0</span>,
+        Time left: <span id="timer">0</span>,
+    </p>
+
+</div>
+
+     <main1>
+         <section class="panel">
+            <img src="img/seven.png">
+            <p class="stop">stop</p>
+        </section>
+        <section class="panel">
+            <img src="img/cherry.png">
+            <p class="stop">stop</p>
+        </section>
+        <section class="panel">
+            <img src="img/bell.png">
+            <p class="stop">stop</p>
+        </section> 
+        
+    </main1 class="container">
+ 
+
+    <div id="spin">spin</div> -->
+
+
+    <main>
+           
+      
+            <section class="py-5">
+              <h2 class="mb-5 text-center">遊びたいゲームを選んでね！</h2>
+              <div class="container">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item"><a href="#ios" class="nav-link active" data-toggle="tab">タイマー</a></li>
+                  <li class="nav-item"><a href="#omikuji" class="nav-link" data-toggle="tab">おみくじ</a></li>
+                  <li class="nav-item"><a href="#surotto" class="nav-link" data-toggle="tab">スロット</a></li>
+                  <li class="nav-item"><a href="#taiping" class="nav-link" data-toggle="tab">タイピング</a></li>
+                  <li class="nav-item"><a href="#quiz" class="nav-link" data-toggle="tab">クイズ問題</a></li>
+                </ul>
+                <div class="tab-content py-4">
+                  <div id="ios" class="tab-pane active">
+                        <div class="timer__container">
+                                <div id="timer1">00:00.000</div>
+                                <div class="controlers">
+                                    <div class="btn" id="start">Start</div>
+                                    <div class="btn" id="stop">Stop</div>
+                                    <div class="btn" id="reset">Reset</div>
+                                </div>
+                            </div>
+                  </div>
+                  <div id="omikuji" class="tab-pane ">
+                        <div class="timer__container ">
+                                <button class="btn" id="btn">?</button>
+                            </div>
+                  </div>
+                  <div id="surotto" class="tab-pane ">
+                        <main1>
+                                <!-- <section class="panel">
+                                    <img src="img/seven.png">
+                                    <p class="stop">stop</p>
+                                </section>
+                                <section class="panel">
+                                    <img src="img/cherry.png">
+                                    <p class="stop">stop</p>
+                                </section>
+                                <section class="panel">
+                                    <img src="img/bell.png">
+                                    <p class="stop">stop</p>
+                                </section> -->
+                                
+                            </main1 class="container">
+                        
+                        
+                            <div id="spin">spin</div>
+                  </div>
+                  <div id="taiping" class="tab-pane ">
+                        <div class="container bg-secondary text-center mx-auto">
+                                <p  class="text-light" id="target">button to start</p>
+                                <p class="info">
+                                    Leter conut: <span id="score">0</span>,
+                                    Miss count: <span id="miss">0</span>,
+                                    Time left: <span id="timer">0</span>,
+                                </p>
+                                <button type="button" class="btn btn-info text-white" id="btn2">click!</button>
+                            </div>
+                            
+                            </div>
+                            <div id="quiz" class="tab-pane ">
+                                    <div class="container">
+                                            <p id="qusetion"></p>
+                                            <ul id="choices"></ul>
+                                            <div id="next" class="disabled">Next</div>
+                                    
+                                            <section id="result">
+                                                <p></p>
+                                                <a href="">Replay?</a>
+                                            </section>
+                                        </div>
+                      </div>
+                </div>
+              </div>
+            </section>
+            
+            <div class="container" id="app">
+                    <h1>MY todos
+                        <button @click="purge">Purge</button>
+                            <span class="info">({{ remaining.length }}/{{ todos.length }})</span>
+                        </h1>
+                        <like-component message="Like" @increment="incrementTotal"></like-component>
+                        <like-component message="Great" @increment="incrementTotal"></like-component>
+                        <like-component message="bad" @increment="incrementTotal"></like-component>
+                        <like-component @increment="incrementTotal"></like-component>
+                        <p>Total Likes:{{total}} </p>
+                <ul>
+                    <!-- <li>{{todos[0]}} </li>
+                    <li>{{todos[1]}} </li>
+                    <li>{{todos[2]}} </li> -->
+                    <li v-for="(todo, index) in todos"><input type="checkbox" v-model="todo.isDone" >
+                         <!-- <span v-bind:class="{done:todo.isDone}"> {{todo.title}}</span> -->
+                         <span :class="{done:todo.isDone}"> {{todo.title}}</span>
+                         <span @click="deleteItem(index)" class="command" >[x] </span> 
+                        </li><!--vから始まるコードをディレクティブという-->
+                        <li v-show="!todos.length">Nothing to do.yay!</li>
+                    </ul>
+                
+                <!-- <form v-on:submit="addItem" > -->
+                    <form @submit.prevent="addItem">
+                    <input type="text" v-model="newItem" >
+                    <input type="submit" value="Add">
+                    </form>
+            </div>
+          </main>
+          <footer>
+          </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!--Vue.js-->
+    <script src="main.js"></script>
+    <script src="main1.js"></script>
+</body>
+</html>

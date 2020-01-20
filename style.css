@@ -1,0 +1,256 @@
+body{
+    background: #efdec1;
+    padding-top:40px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+#target{
+    font-size: 48px;
+    letter-spacing: 3px;
+}
+.info{
+    color:#ccc
+}
+#btn{
+    width: 200px;
+    height: 200px;
+    background:#ef454a;
+    border-radius:50%;
+    margin:30px auto 0px;
+    text-align: center;
+    line-height: 200px;
+    color:#fff;
+    font-size:30px;
+    font-weight: bold;
+    cursor:pointer;
+    box-shadow:  0 10px 0 #d1438e;
+    user-select: none;
+}
+#btn:hover{
+    opacity: 0.8;
+}
+#btn.pressed{
+    box-shadow: 0 5px 0 #d1438e;
+    margin-top:  35px;
+}
+.timer__container{
+    margin:20px auto;
+    width: 350px;
+    background: #fff;
+    padding:15px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#timer1{
+    background: #3498da;
+    height: 120px;
+    line-height: 120px;
+    font-size: 40px;
+    margin-bottom: 15px;
+
+
+}
+.btn{
+    width: 100px;
+    height: 45px;
+    line-height: 45px;
+    background: #3498da;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+.controlers{
+    display: flex;
+    justify-content: space-between;
+}
+.inactive{
+    opacity: 0.5;
+}
+
+.container{
+    margin:8px auto;
+    background:#fff;
+    border-radius: 4px;
+    padding: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+}
+#qusetion{
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+#choices{
+    list-style: none;
+    padding: 0;
+}
+#choices>li{
+    border:1px solid #ccc;
+    border-radius: 4px;
+    padding:10px;
+    margin-bottom:10px;
+    cursor: pointer;
+}
+#choices>li:hover{
+    background: #f8f8f8;
+}
+#next, #result > a{
+    background: #3498da;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 0 #bbb;
+}
+#next.disabled{
+    background:#ccc;
+    box-shadow: 0 4px 0 #bbb;
+    opacity: 0.7; 
+}
+#choices>li.correct{
+    background:#d4edda;
+    border-color:#c3e6cb;
+    color:#155724;
+    font-weight: bold;
+}
+#choices>li.correct::after{
+    content:"...correct!";
+}
+#choices>li.miss{
+    background:#f8d8da;
+    border-color:#f5c6cb;
+    color:#721c24;
+    font-weight: bold;
+}
+#choices>li.miss::after{
+    content:"...miss!";
+}
+#result{
+    position: absolute;
+    width: 300px;
+    background: #fff;
+    padding:30px;
+    box-shadow: 0 0 2px rgb(0,0,0,0.5);
+    top:-500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 4px;
+    text-align: center;
+    transition: 0.4s ease-out;
+}
+#result.show{
+    top:50px;
+}
+#result>p{
+    font-size:24px:
+}
+
+#result>a{
+    display: block;
+    text-decoration: none;    /*下線をけすCSS */
+
+}
+
+main{
+    width:600px;
+    background: #ecf0f1;
+    padding: 20px;
+    border:4px solid #fff;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+main1{
+    width:350px;
+    background: #ecf0f1;
+    padding: 20px;
+    border:4px solid #fff;
+    border-radius: 12px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.panel img{
+    widows: 90px;
+    height: 110px;
+    margin-bottom:4px;
+    margin:auto;
+
+}
+.stop{
+    cursor: pointer;
+    width: 90px;
+    height: 32px;
+    background: #ef454a;
+    box-shadow: 0 2px 0 #d1483e;
+    border-radius: 16px;
+    line-height: 32px;
+    text-align: center;
+    font-size:14px;
+    color:#fff;
+    user-select: none;
+    margin: auto;
+    margin-top:10px;
+
+
+}
+#spin{
+    cursor: pointer;
+    width: 270px;
+    height: 32px;
+    background: #3498db;
+    box-shadow: 0 2px 0 #2880b9;
+    border-radius: 16px;
+    line-height: 32px;
+    text-align: center;
+    font-size:16px;
+    color:#fff;
+    user-select: none;
+    margin:0 auto;
+    margin-top:20px;
+
+}
+.unmatched{
+    opacity: 0.2;
+  
+}
+
+/* vuestyle */
+#app h1{
+    font-size: 16px;
+    border-bottom:1px solid #ddd;
+    padding:16px;
+}
+#app li{
+    line-height: 1.5;
+}
+.command{
+    font-size:12px;
+    cursor: pointer;
+    color:#2880b9;
+}
+#app ul{
+    padding: 0;
+    list-style:none;
+    
+}
+#app li>span.done{
+    text-decoration: line-through;
+    color:#bbb;
+}
+.info{
+    color:#bbb;
+    font-size: 12px;
+    font-weight: normal;
+}
+#app h1> button{
+    float:right;
+}
